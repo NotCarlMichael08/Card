@@ -42,5 +42,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000);
     }
 
-    setInterval(createHeart, 200);
+    setInterval(createHeart, 300);
 });
