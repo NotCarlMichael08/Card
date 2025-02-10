@@ -1,0 +1,257 @@
+/* General Desgin */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Design */
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    border: 2px solid white;
+}
+
+/* Container Design */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100vh;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Content Design */
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+    animation: glow 1.5s infinite alternate;
+    text-align: center;
+}
+
+.love-message {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    color: red;
+    animation: floatHearts 5s linear infinite;
+}
+
+/* Background shadow Design */
+.shadowing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* 💌 Valentine's Card Design */
+.card {
+    background: #fff5f8;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card header h2 {
+    color: #ff4d6d;
+    font-size: 22px;
+}
+
+.card section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card section p {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Button Design  */
+button {
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+button:hover {
+    background-color: #e91e63;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+#loveButton {
+    padding: 15px 25px;
+}
+
+#closeCard {
+    padding: 10px 15px;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.9);
+    }
+    to {
+        text-shadow: 2px 2px 30px rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 95vw;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .love-message {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 85%;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .love-message {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .love-message {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #loveButton {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    #closeCard {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.0rem;
+    }
+
+    .love-message {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 95%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
