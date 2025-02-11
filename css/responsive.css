@@ -1,0 +1,90 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 95vw;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .love-message {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 85%;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .love-message {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .love-message {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #loveButton {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    #closeCard {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.10rem;
+    }
+
+    .love-message {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 95%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}

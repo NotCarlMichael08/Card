@@ -33,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
     
         heart.style.left = Math.random() * 100 + "vw";
+
         heart.style.fontSize = Math.random() * 20 + 15 + "px";
+
         heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+
         document.body.appendChild(heart);
     
         setTimeout(() => {
@@ -42,5 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000);
     }
 
-    setInterval(createHeart, 300);
+    setInterval(createHeart, 400);
 });
